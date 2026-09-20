@@ -200,6 +200,48 @@
         margin: 0;
       }
 
+      .feet-section {
+        background: #fff7ed;
+        color: #431407;
+      }
+
+      .feet-section .section-intro p {
+        color: #7c2d12;
+      }
+
+      .feet-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+
+      .feet-pic {
+        display: grid;
+        min-height: 220px;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 1rem;
+        background: linear-gradient(145deg, #fed7aa, #fb923c);
+        border: 4px solid #fdba74;
+        box-shadow: 0 12px 28px rgba(124, 45, 18, 0.18);
+        font-size: clamp(4rem, 10vw, 7rem);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .feet-pic:nth-child(2) {
+        background: linear-gradient(145deg, #fef3c7, #fbbf24);
+      }
+
+      .feet-pic:nth-child(3) {
+        background: linear-gradient(145deg, #fecdd3, #fb7185);
+      }
+
+      .feet-pic:hover,
+      .feet-pic:focus-visible {
+        transform: translateY(-6px) rotate(-2deg);
+        box-shadow: 0 18px 34px rgba(124, 45, 18, 0.24);
+      }
+
       .cta {
         text-align: center;
         background: linear-gradient(135deg, #1f2937, #111827);
@@ -235,7 +277,8 @@
           justify-content: flex-start;
         }
 
-        .feature-grid {
+        .feature-grid,
+        .feet-gallery {
           grid-template-columns: 1fr;
         }
       }
@@ -300,6 +343,20 @@
                 <p>Customize your avatar and express your personal style.</p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feet-section" aria-labelledby="feet-heading">
+        <div class="section-inner">
+          <div class="section-intro">
+            <h2 id="feet-heading">Feet pics 👣</h2>
+            <p>A playful little gallery for taking the next step in your Rec Room adventure.</p>
+          </div>
+          <div class="feet-gallery" aria-label="Feet picture gallery">
+            <div class="feet-pic" role="img" aria-label="A pair of orange footprints">🦶🦶</div>
+            <div class="feet-pic" role="img" aria-label="A pair of golden footprints">🦶🦶</div>
+            <div class="feet-pic" role="img" aria-label="A pair of pink footprints">🦶🦶</div>
           </div>
         </div>
       </section>
